@@ -10,5 +10,5 @@ spec:
     protocol: TCP
   selector:
     app: frontend
-    run: wordpess-deploy
+    run: wordpress-deployment
   type: LoadBalancer

@@ -1,8 +1,9 @@
+
 apiVersion: extensions/v1beta1
 kind: ReplicaSet 
 metadata: 
   labels: 
-    run: wordpess-deployment
+    run: wordpress-deployment
     app: frontend
   name: mysql-rs
 spec:  
@@ -10,12 +11,12 @@ spec:
   selector:  
     matchLabels: 
       app: frontend
-      run: wordpess-deployment
+      run: wordpress-deployment
   template:  
     metadata: 
       labels:  
         app: frontend
-        run: wordpess-deployment
+        run: wordpress-deployment
     spec:  
       containers:  
       - image: mysql
@@ -34,4 +35,4 @@ spec:
       volumes:
       - name: mypv        
         persistentVolumeClaim:
-          claimName: mypvc 
+          claimName: mypvc        
